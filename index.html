@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Personal CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class=" ">
+            <nav class="nav-wrapper green">
+                <div class="container">
+                    <a href="#" class="brand-logo">7ty9</a>
+                    <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                        <i class="material-icons">menu</i>
+                      </a>
+              
+
+                    <ul class="hide-on-med-and-down right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Ride</a></li>
+                        <li><a href="#">Drive</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Campus</a></li>
+                        <li><a href="#" class="btn transparent">Login</a></li>
+                        <li><a href="#" class="btn transparent">Login</a></li>
+                    </ul>
+                </div>
+                <ul class="sidenav grey lighten-2" id="mobile-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ride</a></li>
+                    <li><a href="#">Drive</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Campus</a></li>
+                    <li><a href="#" class="btn green">Login</a></li>
+                    <li><a href="#" class="btn green">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+         <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+            
+        <!-- Personal JavaScript -->
+        <script src="app.js" async defer></script>
+
+        <!-- Jquery Methods to be used with Materialize  -->
+        <script>
+            $(document).ready(function(){
+              $('.sidenav').sidenav();
+            });
+          </script>
+    </body>
+</html>

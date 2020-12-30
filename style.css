@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+h1,h2,h3{
+    font-weight: bold;
+    line-height: 2.5rem;
+}
+
+p{
+    font-family: 'poppins-regular', sans-serif;
+    line-height: 1.7rem;
+    color: #303030;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    padding: 0 0 3.5rem 0;
+}
+
+.header-text{
+
+    
+    padding: 3.5rem;
+    height: auto;
+    font-weight: bold;
+}
+
+
+.banner-img{
+    background: url('/assets/images/man-in-taxi.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 600px;
+    
+}
+
+
+@media screen and (max-width: 670px){
+    .banner-img{
+      min-height: 300px;
+    }
+}
+
+
+.driver-cta{
+    padding: 1rem;
+}
+
+.driver-cta > h3{
+    margin: auto;
+    font-weight: bold;
+}
+
+
+.driver-cta > button{
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.product-discovery{
+    margin-top: 150px;
+}
+
+.tia{
+    padding: 40px;
+}
+
+
+@media screen and (max-width: 670px){
+    .tia{
+        padding: 0;
+    }
+}
+
+
+.contact-container{
+    margin-bottom: 0 !important;
+}
+
+
+#contactUs > div > input{
+    border-color: white;
+}

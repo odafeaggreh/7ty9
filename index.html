@@ -6,6 +6,8 @@
         <title>Home page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">  
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!--Import Google Icon Font-->
@@ -13,10 +15,13 @@
         <!-- Personal CSS -->
         <link rel="stylesheet" href="style.css">
     </head>
+
+
+
     <body>
         <!-- Header -->
-        <header class=" ">
-            <nav class="nav-wrapper green">
+        <header class=" green header">
+            <nav class="nav-wrapper transparent">
                 <div class="container">
                     <a href="#" class="brand-logo">7ty9</a>
                     <a href="#" class="sidenav-trigger" data-target="mobile-menu">
@@ -30,21 +35,202 @@
                         <li><a href="#">Drive</a></li>
                         <li><a href="#">Food</a></li>
                         <li><a href="#">Campus</a></li>
-                        <li><a href="#" class="btn transparent">Login</a></li>
-                        <li><a href="#" class="btn transparent">Login</a></li>
+                        <li><a href="#" class="btn transparent waves-effect">Login</a></li>
+                        <li><a href="#" class="btn transparent waves-effect">Login</a></li>
                     </ul>
+
+                    <ul class="sidenav grey lighten-2" id="mobile-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Ride</a></li>
+                        <li><a href="#">Drive</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Campus</a></li>
+                        <li><a href="#" class="btn green waves-effect">Login</a></li>
+                        <li><a href="#" class="btn green waves-effect">Login</a></li>
+                    </ul>    
                 </div>
-                <ul class="sidenav grey lighten-2" id="mobile-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ride</a></li>
-                    <li><a href="#">Drive</a></li>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">Campus</a></li>
-                    <li><a href="#" class="btn green">Login</a></li>
-                    <li><a href="#" class="btn green">Login</a></li>
-                </ul>
             </nav>
+            <!-- End of Nav -->
+
+
+            <!-- Header text start & button-->
+
+            <div class="container">
+                <div>
+                    <h1 class="white-text header-text flow-text">A fast, cheap and efficient way to move around your estste and within campus</h1>
+                </div>
+
+                <span class="white-text right">order a ride now
+                    <a href="#" class="btn-floating white pulse">
+                        <i class="material-icons black-text">arrow_forward</i>
+                    </a>
+                </span>
+            </div>
+            <!-- Header text end -->
         </header>
+
+        <!-- Banner image -->
+        <div class="banner-img">
+
+        </div>        
+        <!-- Banner image end-->
+
+        <!-- Driver call to action section  -->
+        <div class="purple">
+            <div class="container driver-cta center-align">
+                <h2 class="flow-text">Want to earn extra ? </h2>
+                <p >Your schedule, Your time, You're in control</p>
+                <button class="btn-large white black-text">SIGN UP TO DRIVE</button>
+            </div>
+        </div>
+        <!-- Driver call to action section  end-->
+
+
+        <!-- product discovery -->
+        <div class="container">
+            <div class="row product-discovery">
+                
+                <div class="col s12 l4">
+                    <div class="row tia">
+                        <div class="col s4 l12">
+                            <img src="assets/images/order ride.png" alt="" class="responsive-img">
+                        </div>
+
+                        <div class="col s6 l12 offset-s2">
+                            <h2 class="flow-text">Order a ride</h2>
+                            <p>Order a ride and get it in few minutes. With 7ty9's variety of offers, you're sure to get what suites your needs. </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col s12 l4">
+                    <div class="row tia">
+                        <div class="col s4 l12">
+                            <img src="assets/images/payments.png" alt="" class="responsive-img">
+                        </div>
+
+                        <div class="col s6 l12 offset-s2">
+                            <h2 class="flow-text">The best rates</h2>
+                            <p>At 7ty9 we understand the financial strains of our users so we offer our services at the best rates you could get anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col s12 l4">
+                    <div class="row tia">
+                        <div class="col s4 l12">
+                            <img src="assets/images/easy to use.png" alt="" class="responsive-img">
+                        </div>
+
+                        <div class="col s6 l12 offset-s2">
+                            <h2 class="flow-text">Easy to use</h2>
+                            <p>We make your journey with us as stress free as possible, just make an order, seatback and we'll do all the heavy lifting for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CTA -->
+            <div class="row">
+                <span class="black-text right">order a ride now
+                    <a href="#" class="btn-floating green pulse">
+                        <i class="material-icons black-text">arrow_forward</i>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <!-- product discovery end-->
+
+
+        
+        <!-- Contact form start -->
+        <div class="green">
+            <div class="container">
+                <div class="row contact-container">
+                    <div class="col s12 l5">
+                        <h2 class="white-text">Get in touch</h2>
+                        <p class="white-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente qui natus deserunt obcaecati deleniti harum vitae recusandae quibusdam, laborum, dolorem eaque sit porro facilis doloribus. Dicta incidunt unde rem nesciunt.</p>
+                    </div>
+    
+    
+                    <div class="col s12 l5 offset-l2">
+                        <form action="" id="contactUs">
+                            <div class="input-field">
+                                <i class="material-icons prefix white-text">email</i>
+                                <input type="text" id="email">
+                                <label for="email" class="white-text">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix white-text">phone</i>
+                                <input type="text" id="phone">
+                                <label for="email" class="white-text">Phone number</label>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix white-text">message</i>
+                                <input type="text" id="message">
+                                <label for="email" class="white-text">Message</label>
+                            </div>
+
+                            <div class="input-field">
+                                <button class="btn white black-text">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact form end -->
+        
+
+
+
+        <!-- Footer start -->
+        <footer class="page-footer grey darken-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 l6 offset-l1">
+                        <h5>About us</h5>
+                        <p class="white-text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis voluptas molestias quasi eum voluptatem ipsum ex. Officiis voluptatibus expedita harum pariatur quis animi voluptas, excepturi voluptatem magni quod velit omnis.
+                        </p>
+                    </div>
+
+
+                    <div class="col s12 l5">
+                        <h5>Connect whith us</h5>
+                        <ul>
+                            <div class="row">
+                                <div class="col s4">
+                                    <li><a href="#" class="btn-floating btn-small green tooltipped" data-tooltip="Connect on Instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a></li>    
+                                </div>
+                                <div class="col s4">
+                                    <li><a href="#" class="btn-floating btn-small green tooltipped" data-tooltip="Connect on Facebook">
+                                        <i class="fab fa-facebook"></i>
+                                    </a></li>
+                                </div>
+                                <div class="col s4">
+                                    <li><a href="#" class="btn-floating btn-small green tooltipped" data-tooltip="Connect on Twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+
+
+
+
+        
          <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -56,6 +242,7 @@
         <script>
             $(document).ready(function(){
               $('.sidenav').sidenav();
+              $('.tooltipped').tooltip();
             });
           </script>
     </body>

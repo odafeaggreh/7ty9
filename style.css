@@ -15,6 +15,11 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+
+.row{
+    margin-bottom: 0;
+}
+
 .header{
     padding: 0 0 3.5rem 0;
 }
@@ -29,19 +34,18 @@ html{
 
 
 .banner-img{
-    background: url('/assets/images/man-in-taxi.jpg');
-    background-position: center;
+    background: url(/assets/images/man-in-taxi.jpg);
     background-size: cover;
-    min-height: 600px;
-    
+    background-position: center;
+    min-height: 800px;
 }
 
 
-@media screen and (max-width: 670px){
+ @media screen and (max-width: 670px){
     .banner-img{
       min-height: 300px;
     }
-}
+} 
 
 
 .driver-cta{
@@ -60,11 +64,11 @@ html{
 }
 
 .product-discovery{
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
-.tia{
-    padding: 40px;
+.content-item{
+    padding: 40px !important;
 }
 
 

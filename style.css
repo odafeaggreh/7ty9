@@ -34,7 +34,7 @@ html{
 
 
 .banner-img{
-    background: url("https://github.com/odafeaggreh/7ty9/blob/main/assets/images/man-in-taxi.jpg");
+    background: url("assets/images/man-in-taxi.jpg");
     background-size: cover;
     background-position: center;
     min-height: 800px;

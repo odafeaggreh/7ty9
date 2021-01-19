@@ -2,13 +2,17 @@
 
 h1,h2,h3{
     font-weight: bold;
-    line-height: 2.5rem;
+}
+
+
+h1{
+    font-size: 5vh;
+    line-height: 1.5em;
 }
 
 p{
     font-family: 'poppins-regular', sans-serif;
     line-height: 1.7rem;
-    color: #303030;
 }
 
 html{
@@ -22,19 +26,11 @@ html{
 
 .header{
     padding: 0 0 3.5rem 0;
-}
-
-.header-text{
-
-    
-    padding: 3.5rem;
     height: auto;
-    font-weight: bold;
 }
 
 
 .banner-img{
-    background: url("assets/images/man-in-taxi.jpg");
     background-size: cover;
     background-position: center;
     min-height: 800px;

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="798" viewBox="0 0 414 798">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #2dbb54;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Mask" class="cls-1" width="414" height="798" transform="translate(0 -198)"/>
+    </clipPath>
+  </defs>
+  <g id="Background_Mask" data-name="Background Mask" class="cls-2" transform="translate(0 198)">
+    <path id="Background" class="cls-3" d="M411.526,605.945c0-64.959-571.284-55.317-367.653-349.186S645.862-95.546,748.968,169.5s427.254,181.309,427.254,43.7V605.945Z" transform="translate(668 334.594) rotate(180)"/>
+  </g>
+</svg>

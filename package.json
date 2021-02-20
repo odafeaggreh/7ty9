@@ -1,0 +1,24 @@
+{
+  "name": "7ty9",
+  "version": "1.0.0",
+  "description": "\"# 7ty9\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odafeaggreh/7ty9.git"
+  },
+  "author": "Aggreh Odafe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odafeaggreh/7ty9/issues"
+  },
+  "homepage": "https://github.com/odafeaggreh/7ty9#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "firebase": "^8.2.7",
+    "firebaseui": "^4.7.3"
+  }
+}

@@ -7,29 +7,30 @@
         <title>7ty9 | Order ride</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../rider/style.css">
+        
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS || MATERIALIZE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        
+
+        <link rel="stylesheet" href="main.css">
     </head>
+
+
     <body>
         <!-- BREADCRUM -->
         <section class="breadcrum">
-            <div class="content">
-              <img src="logo2.png" alt="brand logo" style="max-width: 115px; width: auto; margin: 40px 0;">
-            </div>
-        </section>
+        <div class="content">
+            <img src="logo2.png" alt="brand logo" class="breadcrum-logo">
+        </div>
+        </section> 
           
         <!-- SELECT WHERE YOU WOULD BE NEEDING THE SERVICE -->
         <section class="container">
             <div class="welcome-message">
                 <h1 class="center flow-text wel-header">Hi John, where would you be ordering from today?</h1>
                 <div class="row center select-type">
-
-
                     <div class="col s12 l6 dropdown-item">
                         <!-- Dropdown Trigger -->   
                         <a class='dropdown-trigger btn green' href='#' data-target='dropdown1'><i class="material-icons right">arrow_drop_down</i> At my estate</a>
@@ -73,13 +74,13 @@
                             <input type="text" id="name" class="validate">
                             <label for="name">Email</label>
                         </div>
-                        <p style="margin-left: 15px;">
+                        <p class="radio-btn">
                             <label for="estate">
                                 <input type="radio" id="estate" name="group1" class="with-gap">
                                 <span>Estate</span>
                             </label>
                         </p>
-                        <p style="margin-left: 15px;">
+                        <p class="radio-btn">
                             <label for="uni">
                                 <input type="radio" id="uni" name="group1" class="with-gap">
                                 <span>University</span>
@@ -91,6 +92,8 @@
                 </form>
             </div>
         </div>
+
+        
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         

@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* CORE STYLES */
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins';
+}
+
+
+header, main, footer {
+        padding-left: 300px;
+      }
+  
+@media only screen and (max-width : 992px) {
+        header, main, footer {
+          padding-left: 0;
+        }
+      }
+
+
+/* BREADCRUM STYLE */
+.breadcrum{
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+}
+
+.breadcrum-logo{
+        max-width: 115px;
+        width: auto;
+        margin: 40px 0;
+}
+
+.breadcrum::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 100vh;
+        width: 100vh;
+        background: #4CAF50;
+        border-radius: 50%;
+        transform-origin: bottom;
+        transform: translateX(-50%) scale(4);
+
+}
+
+.breadcrum .content{
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        text-align: center;
+}
+
+
+
+/* SIGNIN PAGE */
+section.signin-widget > div > h2{
+        padding: 30px;
+        font-family: 'poppins', sans-serif;
+        font-weight: bold;
+}
+
+
+.auth-container{
+        margin-top: 100px;
+}
+
+
+
+/* MODE OF RIDE PAGE */
+.wel-header{
+        font-weight: bold;
+}
+
+
+.dropdown-item{
+        margin-bottom: 20px;
+}
+
+.select-type{
+        margin-top: 130px;
+}
+
+
+.request-form{
+        margin-top: 150px !important;
+}
+
+.request-form-header{
+        font-weight: bold;
+}
+
+
+.radio-btn{
+        margin-left: 15px;
+}
+
+
+
+/* RIDE APP INDEX PAGE */
+.app-breadcrum{
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        overflow: hidden;
+
+}
+
+.app-breadcrum-logo{
+        max-width: 60px !important; 
+        width: auto; 
+        margin: 40px 0;
+}
+
+.app-breadcrum::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 100vh;
+        width: 100vh;
+        background: #4CAF50;
+        border-radius: 50%;
+        transform-origin: bottom;
+        transform: translateX(-50%) scale(4);
+
+}
+
+.app-breadcrum .content{
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        text-align: center;
+}
+
+
+.ride-history-cards{
+        margin-top: 80px !important;
+}
+
+
+.card-panel > span{
+        font-size: .8em !important;
+        
+}
+
+
+.card-panel > p{
+        font-weight: bold;
+        font-size: medium;
+        padding: 5px 0 10px 0;
+}
+
+.start-location{
+        padding: 10px 0 5px 0 !important;
+}
+
+#selectPhoto{
+        display: none;
+}
+
+
+/* SETTINGS */
+
+.content-wrapper{
+        
+        border-radius: 2px; 
+        margin-top: 100px; 
+        padding: 15px; 
+        height: 150px;
+}
+
+
+.profile-wrapper{
+        margin: 0;
+        padding: 10px;
+}
+
+
+.profile-img{
+        margin-top: 10px;
+        height: 100px; 
+        width: 100px;
+        position: absolute;
+}
+
+
+.collapsible-header{
+        font-weight: bold;
+}
+
+
+.favourites{
+        border-radius: 2px;
+}
+
+
+.select-btn{
+        position: relative; 
+        right: 10px;
+        top: -1px;
+}
+
+
+.profile-name-wrapper{
+        margin-top: 50px; 
+        font-weight: bold; 
+        font-size: 1.5rem;
+}
+
+
+.profile-name{
+        margin-left: 30px;
+}
+
+
+.favourites{
+        font-weight: bold;
+}
+
+
+.user-favourite-info{
+        font-weight: 300; 
+}
+
+
+.street-name{
+        font-weight: bold; 
+        margin-top: 10px; 
+        display: inline-block; 
+        width: 50%;
+}
+
+
+.change-favourite{
+        padding: 5px; 
+        border-radius: 30px; 
+        border: 1px solid green;
+}
+
+
+@media screen and (max-width: 350px){
+        .user-favourite-info, .street-name, .change-favourite{
+                font-size: 0.8rem;
+        }
+}
+
+
+@media screen and (max-width: 300px){
+        .user-favourite-info, .street-name, .change-favourite{
+                font-size: 0.6rem;
+        }
+
+
+        .change-favourite{
+                padding: 2px;
+                border-radius: 12px;
+        }
+}

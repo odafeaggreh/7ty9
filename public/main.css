@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/* CORE STYLES */
 h1,h2,h3{
     font-weight: bold;
 }
@@ -24,9 +26,20 @@ html{
     margin-bottom: 0;
 }
 
+
+
+/* HOME PAGE STYLES */
+
 .header{
     padding: 0 0 3.5rem 0;
     height: auto;
+}
+
+
+.logo{
+    width: 27px;
+    margin: 10px;
+    
 }
 
 

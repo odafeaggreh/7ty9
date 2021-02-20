@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>7ty9 | Order ride - Signin</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FIREBASE UI -->
+        <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css" />
+        <!-- Compiled and minified CSS || MATERIALIZE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+        <!-- FIREBASE AUTH LIBRERY -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+        <!-- PERSONAL STYLES -->
+        <link rel="stylesheet" href="main.css">
+
+
+        <!-- FIREBASE CONFIGURATION SETTINGS -->
+        <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDn17srBVoSRl3_4R0koOaNtlBP8vSG3Uk",
+            authDomain: "ty9-92d7f.firebaseapp.com",
+            projectId: "ty9-92d7f",
+            storageBucket: "ty9-92d7f.appspot.com",
+            messagingSenderId: "336679389327",
+            appId: "1:336679389327:web:a7e9f23dff4570360ec8fa"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        </script>
+
+
+
+        <!-- FIREBASE UI -->
+        <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css" />
+        <script type="text/javascript">
+          // FirebaseUI config.
+          var uiConfig = {
+            signInSuccessUrl: 'mode-of-ride.html',
+            signInOptions: [
+              
+              firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+              firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            ],
+
+            // Required to enable one-tap sign-up credential helper.
+            credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO,
+            // tosUrl and privacyPolicyUrl accept either url string or a callback
+            // function.
+            // Terms of service url/callback.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url/callback.
+            privacyPolicyUrl: function() {
+              window.location.assign('<your-privacy-policy-url>');
+            }
+          };
+    
+          // Initialize the FirebaseUI Widget using Firebase.
+          var ui = new firebaseui.auth.AuthUI(firebase.auth());
+          // The start method will wait until the DOM is loaded.
+          ui.start('#firebaseui-auth-container', uiConfig);
+        </script>
+    </head>
+    <body>
+        <!-- BREADCRUM -->
+        <section class="breadcrum">
+          <div class="content">
+            <img src="logo2.png" alt="brand logo" class="breadcrum-logo">
+          </div>
+        </section>
+
+        <!-- SIGNIN WIDGET -->
+        <section class="signin-widget">
+            <div class="container auth-container center">
+              <h2 class="flow-text">Select a preffred signin method</h2>
+                <div id="firebaseui-auth-container"></div>
+            </div>
+        </section>
+
+
+        <script src="index.js"></script>
+    </body>
+</html>

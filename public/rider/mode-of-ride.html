@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>7ty9 | Order ride</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS || MATERIALIZE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+
+    <body>
+        <!-- BREADCRUM -->
+        <section class="breadcrum">
+        <div class="content">
+            <img src="logo2.png" alt="brand logo" class="breadcrum-logo">
+        </div>
+        </section> 
+          
+        <!-- SELECT WHERE YOU WOULD BE NEEDING THE SERVICE -->
+        <section class="container">
+            <div class="welcome-message">
+                <h1 class="center flow-text wel-header">Hi John, where would you be ordering from today?</h1>
+                <div class="row center select-type">
+                    <div class="col s12 l6 dropdown-item">
+                        <!-- Dropdown Trigger -->   
+                        <a class='dropdown-trigger btn green' href='#' data-target='dropdown1'><i class="material-icons right">arrow_drop_down</i> At my estate</a>
+
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a href="index.html">Select estate</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col s12 l6">
+                        <!-- Dropdown Trigger -->   
+                        <a class='dropdown-trigger btn green' href='#' data-target='dropdown2'><i class="material-icons right">arrow_drop_down</i> At my university campus</a>
+
+                        <!-- Dropdown Structure -->
+                        <ul id='dropdown2' class='dropdown-content'>
+                            <li><a href="index.html">Select university</a></li>
+                        </ul>
+                    </div>        
+                </div>
+            </div>
+        </section>
+
+        <!-- REQUEST FORM -->
+        <div class="container request-form" >
+            <div class="row">
+                <div class="col s12 l6">
+                    <h2 class="flow-text request-form-header">Request for your Uni or estate to be added</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellendus quidem aperiam delectus praesentium itaque excepturi mollitia ipsum maiores. Laudantium non mollitia quos iste itaque, animi magni laborum odio doloribus.</p>
+                </div>
+                <form action="" class="col s12 l6">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input type="text" id="name" class="validate">
+                            <label for="name">Full name</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">email</i>
+                            <input type="text" id="name" class="validate">
+                            <label for="name">Email</label>
+                        </div>
+                        <p class="radio-btn">
+                            <label for="estate">
+                                <input type="radio" id="estate" name="group1" class="with-gap">
+                                <span>Estate</span>
+                            </label>
+                        </p>
+                        <p class="radio-btn">
+                            <label for="uni">
+                                <input type="radio" id="uni" name="group1" class="with-gap">
+                                <span>University</span>
+                            </label>
+                        </p>
+                        
+                    </div>
+                    <button class="btn green"><i class="material-icons right">send</i> Submit</button>
+                </form>
+            </div>
+        </div>
+
+        
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        
+        <!-- PERSONAL JAVASCRIPT -->
+        <script src="index.js" defer></script>
+    </body>
+</html>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+/* CORE STYLES */
 h1,h2,h3{
     font-weight: bold;
 }
@@ -7,7 +9,7 @@ h1,h2,h3{
 
 h1{
     font-size: 5vh;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
 p{
@@ -24,16 +26,28 @@ html{
     margin-bottom: 0;
 }
 
+
+
+/* HOME PAGE STYLES */
+
 .header{
     padding: 0 0 3.5rem 0;
     height: auto;
 }
 
 
+.logo{
+    width: 27px;
+    margin: 10px;
+    
+}
+
+
 .banner-img{
+    background: url('assets/images/man-in-taxi.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 800px;
+    min-height: 700px;
 }
 
 

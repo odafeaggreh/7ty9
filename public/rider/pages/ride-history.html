@@ -10,7 +10,28 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+        <!-- FIREBASE AUTH LIBRERY -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js"></script>
         <link rel="stylesheet" href="../main.css">
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyDn17srBVoSRl3_4R0koOaNtlBP8vSG3Uk",
+                authDomain: "ty9-92d7f.firebaseapp.com",
+                projectId: "ty9-92d7f",
+                storageBucket: "ty9-92d7f.appspot.com",
+                messagingSenderId: "336679389327",
+                appId: "1:336679389327:web:a7e9f23dff4570360ec8fa"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+            const db = firebase.firestore();
+            const storage = firebase.storage();
+        </script>
     </head>
 
     <body>
@@ -18,10 +39,8 @@
             <nav class="z-depth-0 green">
                 <ul id="slide-out" class="sidenav sidenav-fixed">
                     <li>
-                        <div class="user-view">
-                            <a href="#user"> <img src="https://s3.amazonaws.com/FringeBucket/default-user.png" class="circle" alt="User's profile picture"></a>
-                            <a href="#name"><span class="black-text name">Mark Brown</span></a>
-                            <a href="#email"><span class="black-text email">markBrown@gmail.com</span></a>
+                        <div class="user-view nav-acc-details">
+                            
                         </div>
                     </li>
 
@@ -30,7 +49,7 @@
                     <li><a class="waves-effect black-text" href="#">Ride history</a></li>
                     <li><a class="waves-effect black-text" href="settings.html">Settings</a></li>
                     <li><a class="waves-effect black-text" href="support.html">Support</a></li>
-                    <li><a class="waves-effect black-text" href="#!">Logout</a></li>
+                    <li><a class="waves-effect black-text" href="#!" id="logout">Logout</a></li>
                     <li class="divider"></li>
                     <li><a class="subheader" style="font-weight: bold;">Do more</a></li>
                     <li><a class="waves-effect" href="#!" style="color: #D6D6D6;">Get food delivery</a></li>
@@ -86,7 +105,13 @@
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
         
+        <!-- AUTH JAVASCRIPT -->
+        <script src="../scripts/auth.js"></script>
+
+        <!-- FIREBASE SCRIPTS -->
+        <script src="../scripts/firebase.js"></script>
+        
         <!-- PERSONAL JAVASCRIPT -->
-        <script src="../index.js" defer></script>
+        <script src="../scripts/index.js" ></script>
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>7ty9 | Order ride - Signin</title>
+        <title>7ty9 | Order ride - Signin...</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- FIREBASE UI -->
@@ -38,7 +38,7 @@
 
 
 
-        <!-- FIREBASE UI -->
+        <!-- FIREBASE UI (AUTHENTIFICATION INITIALIZATION)-->
         <script src="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.js"></script>
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.7.1/firebase-ui-auth.css" />
         <script type="text/javascript">
@@ -47,19 +47,28 @@
             signInSuccessUrl: 'mode-of-ride.html',
             signInOptions: [
               
-              firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+              {
+                provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                // PROJECT CLIENTID (USED TO LINK THE 
+                //PROJECT WITH USER AUTH INFO)
+                clientId: '336679389327-ttcqan8e6or6ooqbm7ocjjvh4mfkgut1.apps.googleusercontent.com'
+              },
+              // EMAIL AUTH PROVIDER (FOR AUTHENTICATING
+              // USRES WITH THEIR EMAIL ACCOUNTS)
               firebase.auth.EmailAuthProvider.PROVIDER_ID,
             ],
 
+          scopes: [
+              'https://www.googleapis.com/auth/contacts.read'
+          ],
+
             // Required to enable one-tap sign-up credential helper.
             credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO,
-            // tosUrl and privacyPolicyUrl accept either url string or a callback
-            // function.
-            // Terms of service url/callback.
-            tosUrl: '<your-tos-url>',
-            // Privacy policy url/callback.
+            //  TERMS OF SERVIC
+            tosUrl: '../tos.html',
+            // PRIVACY POLICY
             privacyPolicyUrl: function() {
-              window.location.assign('<your-privacy-policy-url>');
+              window.location.assign('../privacy-policy.html');
             }
           };
     
@@ -85,7 +94,7 @@
             </div>
         </section>
 
-
-        <script src="index.js"></script>
+        <script src="./scripts/auth.js"></script>
+        <script src="./scripts/index.js"></script>
     </body>
 </html>

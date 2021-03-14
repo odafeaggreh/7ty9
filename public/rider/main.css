@@ -9,6 +9,11 @@
 }
 
 
+.row{
+        margin-bottom: 0;
+}
+
+
 header, main, footer {
         padding-left: 300px;
       }
@@ -87,7 +92,8 @@ section.signin-widget > div > h2{
 
 
 .request-form{
-        margin-top: 150px !important;
+        margin-top: 150px;
+        padding-bottom: 30px;
 }
 
 .request-form-header{
@@ -97,6 +103,16 @@ section.signin-widget > div > h2{
 
 .radio-btn{
         margin-left: 15px;
+}
+
+
+[type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
+        border: 2px solid #fff;
+}
+
+
+.M-submit{
+        margin-top: 15px;
 }
 
 
@@ -159,10 +175,6 @@ section.signin-widget > div > h2{
         padding: 10px 0 5px 0 !important;
 }
 
-#selectPhoto{
-        display: none;
-}
-
 
 /* SETTINGS */
 
@@ -186,6 +198,28 @@ section.signin-widget > div > h2{
         height: 100px; 
         width: 100px;
         position: absolute;
+}
+
+
+.visually-hidden {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+
+/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
+input.visually-hidden:focus + label {
+        outline: thin dotted;
+}
+
+
+
+input.visually-hidden:focus-within + label {
+        outline: thin dotted;
 }
 
 
@@ -214,7 +248,7 @@ section.signin-widget > div > h2{
 
 
 .profile-name{
-        margin-left: 30px;
+        margin-left: 0px;
 }
 
 

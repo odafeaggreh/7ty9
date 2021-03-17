@@ -15,6 +15,21 @@
 
 
         <link rel="stylesheet" href="main.css">
+
+        <!-- FIREBASE CONFIGURATION SETTINGS -->
+        <script>
+          var firebaseConfig = {
+              apiKey: "AIzaSyDn17srBVoSRl3_4R0koOaNtlBP8vSG3Uk",
+              authDomain: "ty9-92d7f.firebaseapp.com",
+              projectId: "ty9-92d7f",
+              storageBucket: "ty9-92d7f.appspot.com",
+              messagingSenderId: "336679389327",
+              appId: "1:336679389327:web:a7e9f23dff4570360ec8fa"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          const auth = firebase.auth();
+          </script>
     </head>
 
 
@@ -56,48 +71,54 @@
         </section>
 
         <!-- REQUEST FORM -->
-        <div class="container request-form" >
-            <div class="row">
-                <div class="col s12 l6">
-                    <h2 class="flow-text request-form-header">Request for your Uni or estate to be added</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellendus quidem aperiam delectus praesentium itaque excepturi mollitia ipsum maiores. Laudantium non mollitia quos iste itaque, animi magni laborum odio doloribus.</p>
-                </div>
-                <form action="" class="col s12 l6">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">account_circle</i>
-                            <input type="text" id="name" class="validate">
-                            <label for="name">Full name</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <i class="material-icons prefix">email</i>
-                            <input type="text" id="name" class="validate">
-                            <label for="name">Email</label>
-                        </div>
-                        <p class="radio-btn">
-                            <label for="estate">
-                                <input type="radio" id="estate" name="group1" class="with-gap">
-                                <span>Estate</span>
-                            </label>
-                        </p>
-                        <p class="radio-btn">
-                            <label for="uni">
-                                <input type="radio" id="uni" name="group1" class="with-gap">
-                                <span>University</span>
-                            </label>
-                        </p>
-                        
+        <div class="grey darken-3">
+            <div class="container request-form" >
+                <div class="row">
+                    <div class="col s12 l6">
+                        <h2 class="flow-text request-form-header white-text">Request for your Uni or estate to be added</h2>
+                        <p class="white-text">As we work on our vision of taking our service offerings to every city and campus worldwide, we would love to hear your input on what estates and campuses we should be focusing on first.</p>
                     </div>
-                    <button class="btn green"><i class="material-icons right">send</i> Submit</button>
-                </form>
+                    <form action="" class="col s12 l6">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">account_circle</i>
+                                <input type="text" id="name" class="validate">
+                                <label for="name">Full name</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">email</i>
+                                <input type="text" id="name" class="validate">
+                                <label for="name">Email</label>
+                            </div>
+                            <p class="radio-btn">
+                                <label for="estate">
+                                    <input type="radio" id="estate" name="group1" class="with-gap">
+                                    <span class="white-text">Estate</span>
+                                </label>
+                            </p>
+                            <p class="radio-btn">
+                                <label for="uni">
+                                    <input type="radio" id="uni" name="group1" class="with-gap">
+                                    <span class="white-text ">University</span>
+                                </label>
+                            </p>
+                            
+                        </div>
+                        <button class="btn green M-submit"><i class="material-icons right">send</i> Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
+        
 
         
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+        <!-- AUTH JAVASCRIPT -->
+        <script src="./scripts/auth.js"></script>
         
         <!-- PERSONAL JAVASCRIPT -->
-        <script src="index.js" defer></script>
+        <script src="./scripts/index.js" defer></script>
     </body>
 </html>

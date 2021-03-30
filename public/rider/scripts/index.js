@@ -9,6 +9,8 @@ const favorites = document.querySelector('.favourites');
     M.Sidenav.init(sideNav);
     var collapsible = document.querySelectorAll('.collapsible');
     M.Collapsible.init(collapsible);
+    var favoritesModalTrigger = document.querySelectorAll('.modal');
+    M.Modal.init(favoritesModalTrigger);
 });
 
 // DOM MANIPULATION
@@ -29,6 +31,7 @@ const userProfile = (user) => {
                             
             <div class="col s6 center profile-wrapper">
                 <img class="profile-img circle" src="${user.photoURL == null ? '../../assets/images/profile-placeholder.png' : user.photoURL}" alt="User profile image">
+                
 
 
                 <input type="file" id="selectPhoto" class="visually-hidden">
@@ -40,6 +43,50 @@ const userProfile = (user) => {
                 <div class="user-name flow-text center profile-name">${user.displayName}</div>
             </div>
         </div>
+        
     `
     profile.innerHTML = myProfile
 }
+
+
+const setUpFavs = (user) => {
+    if (user) {
+        db.collection('users').doc(user.uid).onSnapshot(doc => {
+            const favs = `
+                    <ul class="collection with-header">
+                    <li class="collection-header">
+                        <h5 class="favourites">Favourites</h5>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons left green-text">home</i>
+                        <span class="green-text user-favourite-info">Home</span><br>
+                        <p class="street-name">${doc.data() == undefined ? "Unknown" : doc.data().home}</p>
+    
+                        <a href="#modal1" class="right green-text change-favourite modal-trigger"><p>change</p></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons left green-text">work</i>
+                        <span class="green-text user-favourite-info">Work</span><br>
+                        <p class="street-name">${doc.data() == undefined ? "Unknown" : doc.data().work }</p>
+    
+                        <a href="#modal2" class="right green-text change-favourite modal-trigger"><p>change</p></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons left green-text">shopping_cart</i>
+                        <span class="green-text user-favourite-info">Shopping center</span><br>
+                        <p class="street-name">${doc.data() == undefined ? "Unknown" : doc.data().shoppingCenter }</p>
+    
+                        <a href="#modal3" class="right green-text change-favourite modal-trigger"><p>change</p></a>
+                    </li>
+                </ul>
+    
+            `
+            favorites.innerHTML = favs;
+        })    
+    }
+    
+
+    
+    
+}
+

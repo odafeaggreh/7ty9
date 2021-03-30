@@ -13,7 +13,7 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Personal CSS -->
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="./styles.css">
     </head>
 
 
@@ -147,25 +147,31 @@
     
     
                     <div class="col s12 l5 offset-l2">
+                        <!-- todo - add validation -->
                         <form action="" id="contactUs">
                             <div class="input-field">
+                                <i class="material-icons prefix white-text">account_circle</i>
+                                <input type="text" id="name" >
+                                <label for="email" class="white-text">Full name</label>
+                            </div>
+                            <div class="input-field">
                                 <i class="material-icons prefix white-text">email</i>
-                                <input type="text" id="email">
+                                <input type="text" id="email" >
                                 <label for="email" class="white-text">Email</label>
                             </div>
                             <div class="input-field">
                                 <i class="material-icons prefix white-text">phone</i>
-                                <input type="text" id="phone">
+                                <input type="text" id="phone" >
                                 <label for="email" class="white-text">Phone number</label>
                             </div>
                             <div class="input-field">
                                 <i class="material-icons prefix white-text">message</i>
-                                <input type="text" id="message">
-                                <label for="email" class="white-text">Message</label>
+                                <textarea name="message" id="message" class="materialize-textarea"></textarea>
+                                <label for="message" class="white-text">Message</label>
                             </div>
 
                             <div class="input-field">
-                                <button class="btn white black-text"><i class="material-icons right">send</i> Submit</button>
+                                <button class="btn white black-text" type="submit"><i class="material-icons right">send</i> Submit</button>
                             </div>
                         </form>
                     </div>
@@ -220,7 +226,12 @@
 
 
 
-        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+        <!-- FIREBASE AUTH LIBRERY -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+        <!-- FIREBASE FIRESTORE  -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
          <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
             

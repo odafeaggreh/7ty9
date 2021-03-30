@@ -12,6 +12,12 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Compiled and minified CSS || MATERIALIZE -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+        <!-- FIREBASE AUTH LIBRERY -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js"></script>
 
 
         <link rel="stylesheet" href="main.css">
@@ -29,6 +35,8 @@
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
           const auth = firebase.auth();
+          const db = firebase.firestore();
+          const functions = firebase.functions();
           </script>
     </head>
 
@@ -78,27 +86,35 @@
                         <h2 class="flow-text request-form-header white-text">Request for your Uni or estate to be added</h2>
                         <p class="white-text">As we work on our vision of taking our service offerings to every city and campus worldwide, we would love to hear your input on what estates and campuses we should be focusing on first.</p>
                     </div>
-                    <form action="" class="col s12 l6">
+
+
+
+                    <form action="" class="col s12 l6" id="requestContact">
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">account_circle</i>
-                                <input type="text" id="name" class="validate">
+                                <input type="text" id="name">
                                 <label for="name">Full name</label>
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix white-text">email</i>
-                                <input type="text" id="name" class="validate">
+                                <input type="text" id="email">
                                 <label for="name">Email</label>
                             </div>
-                            <p class="radio-btn">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix white-text">location_on</i>
+                                <input type="text" id="location">
+                                <label for="name">Enter loation</label>
+                            </div>
+                            <p class="radio-btn" id="radioSelectEst">
                                 <label for="estate">
-                                    <input type="radio" id="estate" name="group1" class="with-gap">
+                                    <input type="radio" id="estate" name="selectType" class="with-gap" value="estate">
                                     <span class="white-text">Estate</span>
                                 </label>
                             </p>
-                            <p class="radio-btn">
+                            <p class="radio-btn" id="radioSelectUni">
                                 <label for="uni">
-                                    <input type="radio" id="uni" name="group1" class="with-gap">
+                                    <input type="radio" id="uni" name="selectType" class="with-gap" value="University">
                                     <span class="white-text ">University</span>
                                 </label>
                             </p>
@@ -117,6 +133,12 @@
 
         <!-- AUTH JAVASCRIPT -->
         <script src="./scripts/auth.js"></script>
+
+        <!-- FIREBASE JAVASCRIPT -->
+        <script src="./scripts/firebase.js"></script>
+
+        <!-- APP BACKEND LOGIC -->
+        
         
         <!-- PERSONAL JAVASCRIPT -->
         <script src="./scripts/index.js" defer></script>

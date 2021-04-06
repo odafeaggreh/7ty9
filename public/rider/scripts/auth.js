@@ -2,26 +2,21 @@
 initApp = () => {
     auth.onAuthStateChanged(user => {
         if (user) {
-             // User is signed in.
-            //  var displayName = user.displayName;
-            //  var email = user.email;
-            //  var emailVerified = user.emailVerified;
             var photoURL = user.photoURL;
             var uid = user.uid;
-            //  var phoneNumber = user.phoneNumber;
-            //  var providerData = user.providerData;
-
-            // call the function from index.js 
-            // to create user profile on nav
             setUpUi(user);
             userProfile(user);
+            setUpFavs(user);
+            favFormSet(user);
+
+            
             
 
             
             // ********** UPLOAD USER PROFILE PICTURE **********
             // GET DOM ELEMENTS
             let selectphoto = document.querySelector('#selectPhoto');
-            let profilePhoto = document.querySelector('#profilePhoto');
+            
 
             // LISTEN FOR EVENT CHANGE
             selectphoto.addEventListener('change', (e) => {
@@ -29,7 +24,7 @@ initApp = () => {
                 let file = e.target.files[0];
 
                 // CREATE STORAGE REF
-                let storageRef = storage.ref('users/' + uid + '/profile.jpg');
+                let storageRef = storage.ref('users/' + uid + '/profile.jpeg');
 
                 // UPLOAD FILE
                 let task = storageRef.put(file);
@@ -47,29 +42,27 @@ initApp = () => {
                     }, 
 
                     () => {
-                        task.snapshot.ref.getDownloadURL().then(url => {
+                        // get resized user image
+                        let storageRefw = storage.ref('users/' + uid + '/profile.jpeg');
+
+                        storageRefw.getDownloadURL().then(url => {
+                            window.location.reload();
                             user.updateProfile({
                                 photoURL: url
                             }).catch(err => {
                                 console.log(err.message);
                             });
-                            window.location.reload();
                         });
+                        
+                                                
+                        let toastHTML = "<span>Your profile image has been updated!</span>";
+                        M.toast({html: toastHTML});
+                        
                     }
-                )
+                );
             });
-
-            // ********** USER PROFILE **********
-            
-
-            
-
-            
         }
         
-        else {
-            // User is signed out
-        }
     })
 }
 
@@ -77,7 +70,7 @@ initApp = () => {
 
 window.addEventListener('load', () => {
     initApp();
-})
+});
 
 // SIGN USER OUT
 const logout = document.querySelector('#logout');

@@ -102,3 +102,8 @@ html{
 #contactUs > div > input{
     border-color: white;
 }
+
+
+.materialize-textarea{
+    border-color: white !important;
+}
